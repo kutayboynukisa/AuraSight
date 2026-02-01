@@ -1,0 +1,15 @@
+# Web Scraping (Modern & Fast)
+crawl4ai
+
+# Data Validation & LLM Integration
+instructor
+pydantic
+litellm
+python-dotenv
+
+# Async support (Required for Crawl4AI)
+asyncio
+
+# Data Processing & Reporting
+pandas
+openpyxl

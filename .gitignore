@@ -1,0 +1,19 @@
+# Local environment variables
+.env
+
+# Python build artifacts
+__pycache__/
+*.py[cod]
+
+# Virtual environment
+venv/
+env/
+.venv/
+
+# Generated Reports Excel Files
+*.xlsx
+raw_intel.md
+
+# OS specific files
+.DS_Store
+Thumbs.db
