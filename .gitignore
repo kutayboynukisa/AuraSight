@@ -14,6 +14,11 @@ env/
 *.xlsx
 raw_intel.md
 
-# OS specific files
+# Logs 
+*.log
+
+# Editor & OS Settings 
+.vscode/
+.idea/
 .DS_Store
 Thumbs.db
