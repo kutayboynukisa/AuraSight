@@ -9,28 +9,29 @@
 ## 🚀 Key Features
 
 * **🕵️‍♂️ Asynchronous Scouting:** Uses `Crawl4AI` for high-speed, non-blocking web scraping of target corporate websites.
-* **🧠 Multi-Model Intelligence:** Integrates with **OpenRouter** to access state-of-the-art LLMs (such as Google Gemini, Claude 3.5, Llama 3, etc.) for processing raw HTML and extracting semantic meaning.
+* **🧠 Multi-Model Intelligence:** Integrates with **OpenRouter** to access state-of-the-art LLMs (Claude 3.5 Sonnet, Llama 3, etc.) for processing raw HTML and extracting semantic meaning.
 * **🛡️ Structured Data Enforcement:** Utilizes `Instructor` and `Pydantic` to force LLMs to output strict JSON schemas, eliminating hallucinated formats.
 * **💾 Incremental Database:** Features a built-in duplicate prevention system. It checks the existing Excel database before scanning, ensuring only new targets are processed (Cost & Time efficient).
 * **📊 Automated Reporting:** Exports findings (Company Summary, Hiring Status, Key Products, etc.) directly to an Excel file (`strategic_report.xlsx`).
-* **🔒 Enterprise Grade Security:** Environment variables management for API keys using `.dotenv`.
+* **🧩 Modular Architecture:** Clean, maintainable codebase separated into specialized modules (Scraper, Analyzer, Utils).
 
 ## 🛠️ Tech Stack
 
-* **Core Logic:** Python 3.11
+* **Core Logic:** Python 3.11+
 * **Web Scraping:** `crawl4ai` (Async/Await pattern)
 * **LLM Gateway:** `OpenRouter` (Universal API)
 * **Structured Output:** `instructor` & `pydantic`
 * **Data Manipulation:** `Pandas`
-* **AI Model:** Configurable (Supports Gemini, Claude, DeepSeek, Llama, etc.)
 
 ## 📂 Project Structure
 
 ```bash
 AuraSight/
-├── main.py              # The brain of the operation (ETL Pipeline)
-├── requirements.txt     # Dependency list
-├── .gitignore           # Security rules (prevents API leaks)
-├── .env                 # API Keys (Not included in repo)
-├── strategic_report.xlsx # Output database (Generated automatically)
-└── README.md            # Project documentation
+├── main.py               # Manages the pipeline workflow
+├── scraper.py            # Handles async web scraping logic
+├── analyzer.py           # Manages LLM interaction & Pydantic models
+├── utils.py              # Handles database (Excel) & file operations
+├── requirements.txt      # Dependency list
+├── .env                  # API Keys (Not included in repo)
+├── .gitignore            # Security rules
+└── strategic_report.xlsx # Output database (Generated automatically)
